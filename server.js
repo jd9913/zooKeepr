@@ -4,7 +4,7 @@ const express = require('express');
 const { animals } = require('./data/animals');
 
 const PORT = process.env.PORT || 3001;
-const app = express(); //instatntiate the server
+const app = express(); //instantiate the server
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -75,7 +75,7 @@ function validateAnimal(animal){
   if(!animal.diet|| typeof animal.diet!=='string'){
     return false;
   }
-  if )!animal.personalityTraits||!Array.isArray(animal.personalityTraits)){
+  if (!animal.personalityTraits||!Array.isArray(animal.personalityTraits)){
     return false;
   }
   return true;
